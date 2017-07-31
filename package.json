@@ -2,11 +2,11 @@
   "name": "material-ui-submit-field",
   "version": "0.0.1",
   "description": "A text input field which allows enter keypress actions using Material-UI.",
-  "main": "lib/EnterTextField.js", 
+  "main": "lib/EnterTextField.js",
   "author": "Mark Katerberg <mark.katerberg@slalom.com> (https://slalom.com)",
   "repository": {
-      "type": "git",
-      "url": "https://katerberg-slalom@bitbucket.org/katerberg-slalom/material-ui-submit-field.git"
+    "type": "git",
+    "url": "https://katerberg-slalom@bitbucket.org/katerberg-slalom/material-ui-submit-field.git"
   },
   "license": "MIT",
   "keywords": [
@@ -41,6 +41,7 @@
   },
   "scripts": {
     "build": "rimraf lib && babel -d lib --ignore '**Spec**' src",
+    "prepare": "npm run build",
     "test": "mocha --recursive --opts .mocha.opts 'src/**/**Spec.js'"
   }
 }
