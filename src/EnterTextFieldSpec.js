@@ -27,9 +27,10 @@ describe('EnterTextField', () => {
         });
 
         it('fires event when enter key is pressed', () => {
-            testObject.handleKeyPress({charCode: 13});
+            const input = {charCode: 13}
+            testObject.handleKeyPress(input);
 
-            expect(onEnterKeyPress).to.have.been.called;
+            expect(onEnterKeyPress).to.have.been.calledWith(input);
         });
     });
 });
