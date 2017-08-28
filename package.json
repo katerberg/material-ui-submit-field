@@ -1,6 +1,6 @@
 {
   "name": "material-ui-submit-field",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "A text input field which allows enter keypress actions using Material-UI.",
   "main": "lib/EnterTextField.js",
   "author": "Mark Katerberg <mark.katerberg@slalom.com> (https://slalom.com)",
