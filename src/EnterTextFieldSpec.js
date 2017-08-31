@@ -33,5 +33,21 @@ describe('EnterTextField', () => {
             expect(onEnterKeyPress).to.have.been.calledWith(input);
         });
     });
+
+    describe('#componentWillReceiveProps()', () => {
+        it('reattaches props', () => {
+            const onEnterKeyPress = `${Math.random}`;
+            const foo = `${Math.random}`;
+            const props = {
+                onEnterKeyPress,
+                foo,
+            };
+
+            testObject.componentWillReceiveProps(props);
+
+            expect(testObject.onEnterKeyPress).to.eql(onEnterKeyPress);
+            expect(testObject.other.foo).to.eql(foo);
+        });
+    });
 });
 

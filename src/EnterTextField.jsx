@@ -12,6 +12,15 @@ class EnterTextField extends React.Component {
         this.other = other;
     }
 
+    componentWillReceiveProps(props) {
+        const {
+            onEnterKeyPress,
+            ...other
+        } = props;
+        this.onEnterKeyPress = onEnterKeyPress;
+        this.other = other;
+    }
+
     handleKeyPress(event) {
         if (event.charCode === 13) {
             this.onEnterKeyPress(event);
